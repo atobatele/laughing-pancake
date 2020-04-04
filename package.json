@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/atobatele/laughing-pancake/issues"
   },
-  "homepage": "https://github.com/atobatele/laughing-pancake#readme"
+  "homepage": "https://github.com/atobatele/laughing-pancake#readme",
+  "devDependencies": {
+    "protractor": "^5.4.3"
+  }
 }

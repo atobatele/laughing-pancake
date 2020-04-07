@@ -10,7 +10,7 @@ pipeline {
 
             }
         }
-        stage('build') {
+        stage('post') {
             steps {
                 junit 'output/*.xml'
 

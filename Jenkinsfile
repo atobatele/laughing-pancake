@@ -10,15 +10,15 @@ pipeline {
 
             }
         }
-        post {
-          always {
-              steps{
+        stage('build') {
+            steps {
                 junit 'output/*.xml'
-              }
-              script {
-                echo 'stage always'
-              }
-          }
+
+
+            }
         }
+
+
+
     }
 }

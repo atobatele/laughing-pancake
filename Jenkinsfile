@@ -12,12 +12,13 @@ pipeline {
         }
         post {
           always {
-            steps{
-              junit 'output/*.xml'
-            }
-            script {
-              echo 'stage always'
-            }
+              steps{
+                junit 'output/*.xml'
+              }
+              script {
+                echo 'stage always'
+              }
+          }
         }
     }
 }

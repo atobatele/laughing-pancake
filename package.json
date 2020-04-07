@@ -4,7 +4,7 @@
   "description": "Jenkins integration sandbox",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "protractor conf.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,9 @@
   "homepage": "https://github.com/atobatele/laughing-pancake#readme",
   "devDependencies": {
     "protractor": "^5.4.3"
+  },
+  "dependencies": {
+    "jasmine": "^3.5.0",
+    "jasmine-reporters": "^2.3.2"
   }
 }

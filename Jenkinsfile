@@ -6,6 +6,17 @@ pipeline {
                 sh 'npm --version'
                 sh 'node --version'
                 sh 'npm install'
+                sh 'npm test'
+
+            }
+        }
+        post {
+          always {
+            steps{
+              junit 'output/*.xml'
+            }
+            script {
+              echo 'stage always'
             }
         }
     }

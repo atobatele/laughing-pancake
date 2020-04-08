@@ -8,8 +8,8 @@ pipeline {
                 sh 'node --version'
                 sh 'npm install'
                 sh 'npm test'
-
             }
+
           }
 
         }

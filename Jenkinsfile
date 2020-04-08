@@ -2,7 +2,7 @@ pipeline {
     agent { docker { image 'node:latest' } }
     stages {
         stage('build') {
-          script {
+          steps {
             docker.image("selenium/standalone-chrome:3.141.59"){
                 sh 'npm --version'
                 sh 'node --version'

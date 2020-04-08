@@ -1,5 +1,5 @@
 pipeline {
-
+  agent none
     stages {
         stage('build') {
           agent { docker 'node:latest' }
@@ -13,12 +13,12 @@ pipeline {
         stage('test') {
             agent { docker 'selenium/standalone-chrome:3.141.59' }
             steps {
-                  sh 'npm install'
+                  sh 'npm test'
 
             }
         }
         stage('post') {
-            agent { docker 'selenium/standalone-chrome:3.141.59' }
+            agent { docker 'node:latest' }
             steps {
                 junit 'output/*.xml'
             }
